@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Create account</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar is-transparent site-navbar" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item brand" href="index.html">
+          <span class="brand-mark">C</span><span>CampusConnect</span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item"><span class="nav-note">A community made for you.</span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-background signup-background">
+    <div class="container auth-container">
+      <div class="columns is-vcentered is-variable is-8">
+        <section class="column is-5-desktop is-4-tablet intro-panel">
+          <p class="eyebrow">YOUR COMMUNITY STARTS HERE</p>
+          <h1 class="title intro-title">Find your<br><span>people.</span></h1>
+          <p class="intro-copy">Create your CampusConnect account and make your student experience a little more connected.</p>
+          <div class="feature-list">
+            <div class="feature-item"><span class="feature-icon">✓</span><span>Simple, student-friendly access</span></div>
+            <div class="feature-item"><span class="feature-icon">✓</span><span>A space to stay in the loop</span></div>
+            <div class="feature-item"><span class="feature-icon">✓</span><span>Designed for phone and desktop</span></div>
+          </div>
+          <div class="decor-orbit orbit-one"></div><div class="decor-orbit orbit-two"></div>
+        </section>
+
+        <section class="column is-7-desktop is-8-tablet">
+          <div class="card auth-card signup-card">
+            <div class="card-content">
+              <div class="form-heading">
+                <div class="mini-logo">C</div>
+                <p class="title is-3">Create your account</p>
+                <p class="subtitle is-6">A few details and you're ready to go.</p>
+              </div>
+
+              <div id="signupNotice" class="notification is-hidden" role="status" aria-live="polite"></div>
+              <form id="signupForm" novalidate>
+                <div class="field">
+                  <label class="label" for="fullName">Full name</label>
+                  <div class="control">
+                    <input class="input" id="fullName" name="fullName" type="text" placeholder="Your full name" autocomplete="name" required>
+                  </div>
+                  <p class="help is-danger" id="fullNameError"></p>
+                </div>
+                <div class="columns is-variable is-3">
+                  <div class="column">
+                    <div class="field">
+                      <label class="label" for="signupEmail">Email address</label>
+                      <div class="control">
+                        <input class="input" id="signupEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                      </div>
+                      <p class="help is-danger" id="signupEmailError"></p>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <label class="label" for="signupUsername">Username</label>
+                      <div class="control">
+                        <input class="input" id="signupUsername" name="username" type="text" placeholder="Choose a username" autocomplete="username" required>
+                      </div>
+                      <p class="help is-danger" id="signupUsernameError"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns is-variable is-3">
+                  <div class="column">
+                    <div class="field">
+                      <label class="label" for="signupPassword">Password</label>
+                      <div class="control password-control">
+                        <input class="input" id="signupPassword" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+                        <button class="password-toggle" type="button" data-toggle-password="signupPassword" aria-label="Show password">Show</button>
+                      </div>
+                      <div class="strength-track"><div id="strengthBar"></div></div>
+                      <p class="help" id="strengthText">Password strength: not entered</p>
+                      <p class="help is-danger" id="signupPasswordError"></p>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <label class="label" for="confirmPassword">Confirm password</label>
+                      <div class="control password-control">
+                        <input class="input" id="confirmPassword" name="confirmPassword" type="password" placeholder="Enter it again" autocomplete="new-password" required>
+                        <button class="password-toggle" type="button" data-toggle-password="confirmPassword" aria-label="Show confirm password">Show</button>
+                      </div>
+                      <p class="help is-danger" id="confirmPasswordError"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field terms-field">
+                  <label class="checkbox"><input type="checkbox" id="agreeTerms" required> I agree to use CampusConnect respectfully.</label>
+                  <p class="help is-danger" id="termsError"></p>
+                </div>
+                <button class="button is-primary is-medium is-fullwidth submit-button" type="submit">Create account <span aria-hidden="true">→</span></button>
+                <p class="form-switch">Already have an account? <a href="index.html">Log in</a></p>
+              </form>
+              <p class="demo-note">Front-end demo only. Registration is not stored in a database.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="site-footer">© 2026 CampusConnect · Built for student communities</footer>
+    </div>
+  </main>
+</body>
+</html>
